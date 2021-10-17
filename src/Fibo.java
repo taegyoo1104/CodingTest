@@ -11,9 +11,8 @@ public class Fibo {
     }
 
     // 메모이제이션 사용
-    public static int[] dp;
     public static int fiboMemo(int n) {
-        dp[0] = 0;
+        int[] dp = new int[n + 1];
         dp[1] = 1;
         dp[2] = 1;
 
@@ -28,9 +27,9 @@ public class Fibo {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int number = sc.nextInt();
+
         System.out.println(fiboRecur(number));
 
-        dp = new int[number + 1];
         System.out.println(fiboMemo(number));
 
     }
